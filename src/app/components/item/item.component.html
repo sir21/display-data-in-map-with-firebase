@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-title>
+        <img [src]="wish.image.url">
+    </mat-card-title>
+    <mat-card-content>
+        <div class="content">
+            {{wish.userWish}} <span class="name">by {{wish.name}}</span>
+        </div>
+        <div class="time">{{wish.created | date: 'medium'}}</div>
+    </mat-card-content>
+</mat-card>

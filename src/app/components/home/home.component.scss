@@ -1,0 +1,223 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+
+  app-search {
+    position: absolute;
+    background: transparent;
+    top: 10px;
+    left: 50px;
+  }
+
+  div {
+    display: flex;
+  }
+
+  .map {
+    .map-draw {
+      background: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .location {
+      position: absolute;
+      z-index: 10;
+
+      img {
+        position: relative;
+      }
+
+      img:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  .message {
+    display: flex;
+    .bottom {
+      align-items: center;
+
+      .line1 {
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .line2 {
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .button {
+        background: rgb(250, 251, 63);
+        background: radial-gradient(circle, rgba(250, 251, 63, 1) 0%, rgba(252, 167, 70, 1) 36%);
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .background {
+    flex-direction: column;
+    justify-content: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .map {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      justify-content: center;
+      padding-top: 60px;
+
+      .map-draw {
+        height: 400px;
+        width: 300px;
+      }
+    }
+
+    .message {
+      flex: 1;
+      flex-direction: row;
+      align-self: flex-end;
+      align-items: center;
+      width: 100%;
+
+      .light {
+        img {
+          width: 100%;
+          max-width: 200px;
+          max-height: 150px;
+        }
+      }
+
+      .top {
+        display: flex;
+        flex: 1;
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        height: 300px;
+        justify-content: center;
+
+        .line1 {
+          width: 200px;
+          height: 40px;
+        }
+
+        .line2 {
+          width: 200px;
+          height: 40px;
+        }
+
+        .button {
+          min-width: 100px;
+          min-height: 20px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    margin: 5px 5px 0 0;
+    img {
+      width: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .background {
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+
+    .map {
+      width: 100%;
+      height: 100%;
+      flex: 3;
+      justify-content: center;
+      align-items: center;
+
+      .map-draw {
+        height: 650px;
+        width: 500px;
+      }
+    }
+
+    .message {
+      flex: 2;
+      flex-direction: column;
+      align-self: flex-end;
+      align-items: center;
+      margin-right: 50px;
+      max-width: 500px;
+
+      .light {
+        img {
+          width: 200px;
+        }
+      }
+
+      .line1 {
+        width: 300px;
+        height: 50px;
+      }
+
+      .line2 {
+        width: 300px;
+        height: 50px;
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+
+        .button {
+          margin-bottom: 200px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    img {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .background {
+    .map {
+      .map-draw {
+        height: 400px;
+        width: 300px;
+      }
+    }
+  }
+}

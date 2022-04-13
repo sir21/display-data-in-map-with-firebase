@@ -1,0 +1,28 @@
+<div class="background" [ngStyle]="{'background-image': backgroundImage}">
+    <app-search *ngIf="!loading" (listAvailable)="toggleLocations($event)"></app-search>
+    <div class="content" *ngIf="!loading">
+        <div class="map">
+            <div class="map-draw" [ngStyle]="{'background-image': map}" #mapElement></div>
+            <div class="location" *ngFor="let place of places">
+                <img class="bounce" src="../../../assets/images/location.png" [attr.height]="place.height" [id]="place.name"
+                    [ngStyle]="{'top': place.y, 'left': place.x}" (click)="showPopUp($event)"
+                    [matTooltip]="place.tooltip" matTooltipClass="example-tooltip-red" *ngIf="showLocation">
+            </div>
+        </div>
+        <div class="message">
+            <div class="top">
+                <div class="light">
+                    <img src="../../../assets/images/Pahana.png">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="line1" [ngStyle]="{backgroundImage: line1}"></div>
+                <div class="line2" [ngStyle]="{backgroundImage: line2}"></div>
+                <div class="button" [routerLink]="['new']">UPLOAD IMAGE</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="logo" *ngIf="!loading">
+    <img src="../../../assets/images/logo.png">
+</div>

@@ -1,0 +1,19 @@
+<div class="search-component">
+    <div class="search-form">
+        <form [formGroup]="searchForm">
+            <mat-form-field class="example-full-width">
+                <mat-label>Search your wish</mat-label>
+                <input type="text" matInput formControlName="search" placeholder="Your name">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="search-list">
+        <div class="list-item" *ngFor="let item of list">
+            <div class="image" [ngStyle]="{'background-image': getImageUrl(item.image.url)}">
+            </div>
+            <div class="text">{{item.userWish}}</div>
+            <div class="user">by {{item.name}}</div>
+        </div>
+    </div>
+</div>

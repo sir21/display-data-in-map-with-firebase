@@ -1,0 +1,57 @@
+::ng-deep .mat-form-field {
+    color: white;
+    mat-label {
+        color: white;
+    }
+
+    .mat-form-field-wrapper {
+        color: white;
+    }
+
+    .mat-input-element {
+        color: white;
+    }
+
+    .mat-form-field-placeholder {
+        color: white;
+    }
+}
+
+.search-list::-webkit-scrollbar {
+    display: none;
+}
+
+.search-list {
+    max-height: 500px;
+    width: 300px;
+    overflow-x: scroll;
+    background-color: rgba(192, 192, 192, 0.3);
+    z-index: 100;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    .list-item {
+        z-index: 100;
+        .text {
+            padding: 0 3px;
+            color: black;
+        }
+
+        .user {
+            padding-right: 5px;
+            color: navy;
+            float: right;
+        }
+
+        .image {
+            margin-top: 10px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 200px;
+            width: 200px;
+            z-index: 100;
+        }
+    }
+}

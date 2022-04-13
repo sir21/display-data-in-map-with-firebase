@@ -1,0 +1,32 @@
+<div class="new-content">
+  <div class="div-form" [formGroup]="wishForm">
+    <div class="upload">
+      <div class="upload-button" (click)="uploadOpen()" *ngIf="uploadedImage == ''">UPLOAD IMAGE</div>
+      <input type="file" formControlName="file" class="file-upload" #fileUpload (change)="onFileChange($event)">
+      <div class="image" *ngIf="uploadedImage != ''" [ngStyle]="{'background-image': uploadedImage}"></div>
+    </div>
+    <div class="name row">
+      <div class="label">Name</div>
+      <div class="input">
+        <input type="text" formControlName="name">
+      </div>
+    </div>
+    <div class="city row">
+      <div class="label">City</div>
+      <div class="input">
+        <select formControlName="city">
+          <option *ngFor="let town of towns" [value]="town.name">{{town.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="your-wish row">
+      <div class="label">Your Wish</div>
+      <div class="input">
+        <textarea rows="5" formControlName="userWish"></textarea>
+      </div>
+    </div>
+    <div class="button" (click)="submit()">
+      Submit
+    </div>
+  </div>
+</div>

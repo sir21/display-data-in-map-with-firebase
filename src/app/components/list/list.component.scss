@@ -1,0 +1,47 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+::ng-deep .mat-dialog-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+::ng-deep .mat-dialog-container {
+    background-color: #f1f1f1;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    .mat-card {
+        .mat-card-title {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mat-card-content {
+            .content {
+                padding: 0 5px;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    color: gray;
+    text-align: center;
+}
+
+.wish-count {
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.wishes {
+    .wish {
+        margin-bottom: 10px;
+    }
+}

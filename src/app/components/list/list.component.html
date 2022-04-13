@@ -1,0 +1,12 @@
+<div class="wishes">
+    <div class="title">{{town}}</div>
+    <div class="wish-count">
+        <span *ngIf="wishes.length > 1">{{wishes.length}} wishes</span>
+        <span *ngIf="wishes.length === 1">{{wishes.length}} wish</span>
+        from
+        <span *ngFor="let wish of wishes">{{wish.name}},</span>
+    </div>
+    <div class="wish" *ngFor="let wish of wishes">
+        <app-item [wish]="wish"></app-item>
+    </div>
+</div>
